@@ -9,6 +9,8 @@ let main args =
         1 // Non-zero exit code to indicate an error
     else
         let day = args.[0]
+        let stopWatch = System.Diagnostics.Stopwatch.StartNew()
+
         match day with
         | "01" -> Day01.solve
         | "02" -> Day02.solve
@@ -36,6 +38,11 @@ let main args =
         // | "24" -> printfn "%s" Day24.solve()
         // | "25" -> printfn "%s" Day25.solve()
         | _ -> printfn "Day %s not implemented" day
+
+        stopWatch.Stop()
+        printfn "%fms" stopWatch.Elapsed.TotalMilliseconds
+
+        
         0 // Zero exit code to indicate success
 
 // Program end
