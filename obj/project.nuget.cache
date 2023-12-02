@@ -1,14 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OoZ0gyjQDgN84DQdai2wxfvMBBf7w864kB1/leb2SW6QiPuZsfOqa/lxTZzahQ7BJeXsMw2TCT5wCcqj3wo/Kw==",
+  "dgSpecHash": "idUDPIW6X7YkzV+WF7egZHEnHxemsT6hx0cgF0ka6OZbgeR1p94eSkC4g5lEc+c0PLsRItusmdLOkQMUvZuDtg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jakob\\coding\\AoC\\AoC_23\\AoC_23.fsproj",
+  "projectFilePath": "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\AoC_23.fsproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jakob\\.nuget\\packages\\fsharp.core\\7.0.400\\fsharp.core.7.0.400.nupkg.sha512",
-    "C:\\Users\\jakob\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.22\\microsoft.netcore.app.ref.6.0.22.nupkg.sha512",
-    "C:\\Users\\jakob\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.22\\microsoft.windowsdesktop.app.ref.6.0.22.nupkg.sha512",
-    "C:\\Users\\jakob\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.22\\microsoft.aspnetcore.app.ref.6.0.22.nupkg.sha512",
-    "C:\\Users\\jakob\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.22\\microsoft.netcore.app.host.win-x64.6.0.22.nupkg.sha512"
+    "C:\\Users\\jakob\\.nuget\\packages\\fsharp.core\\6.0.6\\fsharp.core.6.0.6.nupkg.sha512"
   ],
   "logs": []
 }

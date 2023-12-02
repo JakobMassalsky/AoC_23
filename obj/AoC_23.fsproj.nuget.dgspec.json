@@ -1,26 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jakob\\coding\\AoC\\AoC_23\\AoC_23.fsproj": {}
+    "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\AoC_23.fsproj": {}
   },
   "projects": {
-    "C:\\Users\\jakob\\coding\\AoC\\AoC_23\\AoC_23.fsproj": {
+    "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\AoC_23.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jakob\\coding\\AoC\\AoC_23\\AoC_23.fsproj",
+        "projectUniqueName": "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\AoC_23.fsproj",
         "projectName": "AoC_23",
-        "projectPath": "C:\\Users\\jakob\\coding\\AoC\\AoC_23\\AoC_23.fsproj",
+        "projectPath": "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\AoC_23.fsproj",
         "packagesPath": "C:\\Users\\jakob\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jakob\\coding\\AoC\\AoC_23\\obj\\",
+        "outputPath": "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jakob\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jakob\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\sdk\\7.0.401\\FSharp\\library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\6.0.402\\FSharp\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,7 +39,7 @@
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[7.0.400, )",
+              "version": "[6.0.6, )",
               "generatePathProperty": true
             }
           },
@@ -52,30 +54,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.22, 6.0.22]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.22, 6.0.22]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.22, 6.0.22]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.22, 6.0.22]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
