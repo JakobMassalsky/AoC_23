@@ -1,12 +1,13 @@
 {
     "assetsHash": "08-61-6B-02-83-EC-95-14-76-E5-7E-50-FF-15-CA-70",
-    "fsprojHash": "9D-FE-40-6B-A8-CA-FE-B8-69-88-D5-E9-57-4F-9F-EC",
+    "fsprojHash": "BD-34-CC-D6-BC-48-DF-87-01-4A-B3-67-77-93-11-B6",
     "Project": {
         "sources": [
             "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\obj\\Debug\\net6.0\\AoC_23.AssemblyInfo.fs",
             "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\Utils.fs",
             "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\Day01.fs",
             "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\Day02.fs",
+            "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\Day03.fs",
             "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\Hub.fs"
         ],
         "options": {
@@ -16,6 +17,7 @@
                 "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\Utils.fs",
                 "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\Day01.fs",
                 "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\Day02.fs",
+                "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\Day03.fs",
                 "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\Hub.fs"
             ],
             "OtherOptions": [
@@ -213,7 +215,7 @@
             "ReferencedProjects": [],
             "IsIncompleteTypeCheckEnvironment": false,
             "UseScriptResolutionRules": false,
-            "LoadTime": "2023-12-02T10:36:52.2316881+01:00",
+            "LoadTime": "2023-12-02T15:02:32.4079901+01:00",
             "OriginalLoadReferences": []
         },
         "target": "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\bin\\Debug\\net6.0\\AoC_23.dll",

@@ -1,4 +1,4 @@
-module DayXX
+module Day03
 
 open Utils
 open System
@@ -10,7 +10,7 @@ let solvePart2 (input) =
     "Not implemented"
 
 let solve =
-    let input = readInput "dayXX.txt"
+    let input = readInput "day03.txt"
 
     // Solve Part 1
     let resultPart1 = solvePart1 input

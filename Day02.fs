@@ -15,7 +15,7 @@ let maxCubes (line: string): int list =
     line |> (new Regex(": |, |; ")).Split
         |> Array.skip 1
         |> Array.map addCube
-        |> Array.fold (fun le re -> List.map2 (max) le re) [0;0;0]
+        |> Array.fold (fun l r -> List.map2 (max) l r) [0;0;0]
     
 let checkValid (cubes: int list): bool =
     cubes.[0] <= 12 && cubes.[1] <= 13 && cubes.[2] <= 14
