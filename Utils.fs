@@ -8,3 +8,5 @@ let inputPath = "./input/"
 // Function to read input from a file
 let readInput (filePath: string) : string[] =
     File.ReadAllLines(inputPath + filePath)
+
+let inline (>=<) a (b,c) = a >= b && a<= c

@@ -14,7 +14,7 @@ let main args =
         match day with
         | "01" -> Day01.solve
         | "02" -> Day02.solve
-        // | "03" -> printfn "%s" Day03.solve()
+        | "03" -> Day03.solve
         // | "04" -> printfn "%s" Day04.solve()
         // | "05" -> printfn "%s" Day05.solve()
         // | "06" -> printfn "%s" Day06.solve()
