@@ -3,23 +3,23 @@ module Day03
 open Utils
 open System
 open System.Text.RegularExpressions
+open MathNet.Numerics
 
 type eNumber = 
     struct
-        val xMin: Int32
-        val xMax: Int32
-        val y: Int32
-        val v: Int32
-        new(index: Int32, y: Int32, string: String) = 
+        val xMin: int
+        val xMax: int
+        val y: int
+        val v: int
+        new(index: int, y: int, string: String) = 
             { xMin = index; xMax = index + string.Length - 1; y = y; v = Int32.Parse string }
 
         member this.checkValid(grid: char[,]): bool =
-            grid[max 0 (this.y-1) .. min (Array2D.length1 grid - 1) (this.y+1), 
-                max 0 (this.xMin-1) .. min (Array2D.length2 grid - 1) (this.xMax+1)]
+            grid |> paddedSlice (this.xMin, this.y) (this.xMax, this.y)
                 |> Seq.cast<Char>
                 |> Seq.exists (fun v -> not (v = '.') && not (Char.IsDigit v) )
     end
-
+    
 let solvePart1 (input: string array) (grid: char[,]) (numbers: eNumber array) =
     numbers |> Array.sumBy (fun n -> if n.checkValid(grid) then n.v else 0)
 
@@ -44,21 +44,19 @@ let findMatchesAndIndices (pattern: string) (input: string) =
 let solve =
     let input = readInput "day03.txt"
 
-    let numbers = input |> Array.map (fun line -> (findMatchesAndIndices "\d+" line)) 
+    let numbers = input |> Array.map (findMatchesAndIndices "\d+") 
                     |> Array.mapi (fun y line -> 
                         Array.map (fun (v, x) -> new eNumber(x, y, v)) line)
                     |> Array.concat
 
-    // Map each line to an array of characters
-    let arrays = input |> Array.map Array.ofSeq
-    // Convert the sequence of arrays into a 2D array
-    let rows = arrays.Length
-    let cols = if rows > 0 then arrays.[0].Length else 0
-    let grid = Array2D.init rows cols (fun i j -> arrays.[i].[j])
+    let grid = inputToCharGrid input
 
     // Solve Part 1
+    let stopWatch = System.Diagnostics.Stopwatch.StartNew()
     let resultPart1 = solvePart1 input grid numbers
+    stopWatch.Stop()
     printfn "Part 1 Result: %A" resultPart1
+    printfn "%fms" stopWatch.Elapsed.TotalMilliseconds
 
     // Solve Part 2
     let resultPart2 = solvePart2 input grid numbers

@@ -15,18 +15,18 @@ let maxCubes (line: string): int list =
     line |> (new Regex(": |, |; ")).Split
         |> Array.skip 1
         |> Array.map addCube
-        |> Array.fold (fun l r -> List.map2 (max) l r) [0;0;0]
+        |> Array.fold (List.map2 (max)) [0;0;0]
     
 let checkValid (cubes: int list): bool =
     cubes.[0] <= 12 && cubes.[1] <= 13 && cubes.[2] <= 14
 
 let solvePart1 (input) =
     input |> Array.indexed
-        |> Array.filter (fun (_, v) -> checkValid v)
-        |> Array.sumBy (fun (i, _) -> i + 1)
+        |> Array.filter (snd >> checkValid)
+        |> Array.sumBy (fst >> (+) 1)
 
 let solvePart2 (input) =
-    input |> Array.sumBy (fun v -> List.reduce (*) v)
+    input |> Array.sumBy (List.reduce (*))
 
 let solve =
     let input = readInput "day02.txt" |> Array.map maxCubes

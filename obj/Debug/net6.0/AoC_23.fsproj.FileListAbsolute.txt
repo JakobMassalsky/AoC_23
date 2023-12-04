@@ -52,3 +52,9 @@ C:\Users\jakob\coding\AoC\AoC_23\obj\Debug\net6.0\AoC_23.fsproj.CopyComplete
 C:\Users\jakob\coding\AoC\AoC_23\obj\Debug\net6.0\AoC_23.dll
 C:\Users\jakob\coding\AoC\AoC_23\obj\Debug\net6.0\AoC_23.pdb
 C:\Users\jakob\coding\AoC\AoC_23\obj\Debug\net6.0\AoC_23.genruntimeconfig.cache
+C:\Users\jakob\OneDrive\Desktop\Coding\AoC_23\bin\Debug\net6.0\FSharp.Control.AsyncSeq.dll
+C:\Users\jakob\OneDrive\Desktop\Coding\AoC_23\bin\Debug\net6.0\FSharpx.Async.dll
+C:\Users\jakob\OneDrive\Desktop\Coding\AoC_23\bin\Debug\net6.0\FSharpx.Collections.dll
+C:\Users\jakob\OneDrive\Desktop\Coding\AoC_23\bin\Debug\net6.0\FSharpx.Extras.dll
+C:\Users\jakob\OneDrive\Desktop\Coding\AoC_23\bin\Debug\net6.0\MathNet.Numerics.dll
+C:\Users\jakob\OneDrive\Desktop\Coding\AoC_23\bin\Debug\net6.0\MathNet.Numerics.FSharp.dll

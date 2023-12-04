@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "idUDPIW6X7YkzV+WF7egZHEnHxemsT6hx0cgF0ka6OZbgeR1p94eSkC4g5lEc+c0PLsRItusmdLOkQMUvZuDtg==",
+  "dgSpecHash": "x5sIWqnWKDMLsyu9KUMSyrCT2m0h2DyVyupNZCb3yo/aZxA1A68dpNScj6EOLBnNJDFzioZGy7Sm5zIJ7hsMaA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\AoC_23.fsproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jakob\\.nuget\\packages\\fsharp.core\\6.0.6\\fsharp.core.6.0.6.nupkg.sha512"
+    "C:\\Users\\jakob\\.nuget\\packages\\fsharp.control.asyncseq\\2.0.21\\fsharp.control.asyncseq.2.0.21.nupkg.sha512",
+    "C:\\Users\\jakob\\.nuget\\packages\\fsharp.core\\6.0.6\\fsharp.core.6.0.6.nupkg.sha512",
+    "C:\\Users\\jakob\\.nuget\\packages\\fsharpx.async\\1.14.1\\fsharpx.async.1.14.1.nupkg.sha512",
+    "C:\\Users\\jakob\\.nuget\\packages\\fsharpx.collections\\2.1.2\\fsharpx.collections.2.1.2.nupkg.sha512",
+    "C:\\Users\\jakob\\.nuget\\packages\\fsharpx.extras\\3.1.0\\fsharpx.extras.3.1.0.nupkg.sha512",
+    "C:\\Users\\jakob\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512",
+    "C:\\Users\\jakob\\.nuget\\packages\\mathnet.numerics.fsharp\\5.0.0\\mathnet.numerics.fsharp.5.0.0.nupkg.sha512",
+    "C:\\Users\\jakob\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

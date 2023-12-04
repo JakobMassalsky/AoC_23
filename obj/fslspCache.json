@@ -1,6 +1,6 @@
 {
-    "assetsHash": "08-61-6B-02-83-EC-95-14-76-E5-7E-50-FF-15-CA-70",
-    "fsprojHash": "BD-34-CC-D6-BC-48-DF-87-01-4A-B3-67-77-93-11-B6",
+    "assetsHash": "14-3C-4B-51-AB-DE-7B-1D-00-E5-AE-5F-28-36-C6-C4",
+    "fsprojHash": "CB-7A-79-C4-E9-1E-83-0B-21-76-93-6A-73-CC-31-80",
     "Project": {
         "sources": [
             "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\obj\\Debug\\net6.0\\AoC_23.AssemblyInfo.fs",
@@ -41,7 +41,13 @@
                 "--define:NETCOREAPP3_1_OR_GREATER",
                 "--optimize-",
                 "--tailcalls-",
+                "-r:C:\\Users\\jakob\\.nuget\\packages\\fsharp.control.asyncseq\\2.0.21\\lib\\netstandard2.0\\FSharp.Control.AsyncSeq.dll",
                 "-r:C:\\Users\\jakob\\.nuget\\packages\\fsharp.core\\6.0.6\\lib\\netstandard2.1\\FSharp.Core.dll",
+                "-r:C:\\Users\\jakob\\.nuget\\packages\\fsharpx.async\\1.14.1\\lib\\netstandard2.0\\FSharpx.Async.dll",
+                "-r:C:\\Users\\jakob\\.nuget\\packages\\fsharpx.collections\\2.1.2\\lib\\netstandard2.0\\FSharpx.Collections.dll",
+                "-r:C:\\Users\\jakob\\.nuget\\packages\\fsharpx.extras\\3.1.0\\lib\\netstandard2.0\\FSharpx.Extras.dll",
+                "-r:C:\\Users\\jakob\\.nuget\\packages\\mathnet.numerics\\5.0.0\\lib\\net6.0\\MathNet.Numerics.dll",
+                "-r:C:\\Users\\jakob\\.nuget\\packages\\mathnet.numerics.fsharp\\5.0.0\\lib\\net6.0\\MathNet.Numerics.FSharp.dll",
                 "-r:C:\\Program Files\\dotnet\\packs\\Microsoft.NETCore.App.Ref\\6.0.10\\ref\\net6.0\\Microsoft.CSharp.dll",
                 "-r:C:\\Program Files\\dotnet\\packs\\Microsoft.NETCore.App.Ref\\6.0.10\\ref\\net6.0\\Microsoft.VisualBasic.Core.dll",
                 "-r:C:\\Program Files\\dotnet\\packs\\Microsoft.NETCore.App.Ref\\6.0.10\\ref\\net6.0\\Microsoft.VisualBasic.dll",
@@ -215,7 +221,7 @@
             "ReferencedProjects": [],
             "IsIncompleteTypeCheckEnvironment": false,
             "UseScriptResolutionRules": false,
-            "LoadTime": "2023-12-02T15:02:32.4079901+01:00",
+            "LoadTime": "2023-12-03T15:04:03.1093945+01:00",
             "OriginalLoadReferences": []
         },
         "target": "C:\\Users\\jakob\\OneDrive\\Desktop\\Coding\\AoC_23\\bin\\Debug\\net6.0\\AoC_23.dll",

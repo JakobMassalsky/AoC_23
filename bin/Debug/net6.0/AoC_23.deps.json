@@ -8,10 +8,23 @@
     ".NETCoreApp,Version=v6.0": {
       "AoC_23/1.0.0": {
         "dependencies": {
-          "FSharp.Core": "6.0.6"
+          "FSharp.Core": "6.0.6",
+          "FSharpx.Extras": "3.1.0",
+          "MathNet.Numerics.FSharp": "5.0.0"
         },
         "runtime": {
           "AoC_23.dll": {}
+        }
+      },
+      "FSharp.Control.AsyncSeq/2.0.21": {
+        "dependencies": {
+          "FSharp.Core": "6.0.6"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharp.Control.AsyncSeq.dll": {
+            "assemblyVersion": "2.0.21.0",
+            "fileVersion": "2.0.21.0"
+          }
         }
       },
       "FSharp.Core/6.0.6": {
@@ -62,7 +75,65 @@
             "locale": "zh-Hant"
           }
         }
-      }
+      },
+      "FSharpx.Async/1.14.1": {
+        "dependencies": {
+          "FSharp.Control.AsyncSeq": "2.0.21",
+          "FSharp.Core": "6.0.6"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharpx.Async.dll": {
+            "assemblyVersion": "1.14.1.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "FSharpx.Collections/2.1.2": {
+        "dependencies": {
+          "FSharp.Core": "6.0.6"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharpx.Collections.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FSharpx.Extras/3.1.0": {
+        "dependencies": {
+          "FSharp.Core": "6.0.6",
+          "FSharpx.Async": "1.14.1",
+          "FSharpx.Collections": "2.1.2",
+          "System.Reflection.Emit.Lightweight": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharpx.Extras.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.0.0"
+          }
+        }
+      },
+      "MathNet.Numerics/5.0.0": {
+        "runtime": {
+          "lib/net6.0/MathNet.Numerics.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "MathNet.Numerics.FSharp/5.0.0": {
+        "dependencies": {
+          "FSharp.Core": "6.0.6",
+          "MathNet.Numerics": "5.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/MathNet.Numerics.FSharp.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.7.0": {}
     }
   },
   "libraries": {
@@ -71,12 +142,61 @@
       "serviceable": false,
       "sha512": ""
     },
+    "FSharp.Control.AsyncSeq/2.0.21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ebj5Uy+07R6+Nj4Dr1o/UrQqrAsNRAJ9AYEYnc8oEECxp/DBmt1oTK66e/s+caqnQ2mdF7a3U3YN4A48xqyOQA==",
+      "path": "fsharp.control.asyncseq/2.0.21",
+      "hashPath": "fsharp.control.asyncseq.2.0.21.nupkg.sha512"
+    },
     "FSharp.Core/6.0.6": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ZSwKKw+q50wDYHNs12WkKKgZ5vJScN2+cbq6+4jvn8H/D2W8rGMlybGNLHSF96v/Igx680mV7fPTtQe3V/quxg==",
       "path": "fsharp.core/6.0.6",
       "hashPath": "fsharp.core.6.0.6.nupkg.sha512"
+    },
+    "FSharpx.Async/1.14.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4MJz9KejMkozw6iKDOKgVJV81ZYCTF0K/1KBM7724GEnohNuMljhnP+IO8auzyCtg770TXAC25FFuJR/pUJdoQ==",
+      "path": "fsharpx.async/1.14.1",
+      "hashPath": "fsharpx.async.1.14.1.nupkg.sha512"
+    },
+    "FSharpx.Collections/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gNsAqSmhj0pKkeLlZCQf4/LfSXSIH+lg9eQ2aN6Jt5t77oMZeH5IIJ3dshvMdHCtI+TbZvlv/3dyeOUwLd3Qkw==",
+      "path": "fsharpx.collections/2.1.2",
+      "hashPath": "fsharpx.collections.2.1.2.nupkg.sha512"
+    },
+    "FSharpx.Extras/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1lJD6N08a/cQDeeldHyGd7S2/2lKhsoGNpdcNNfShoQpQ0oZHj4+eQuk6W0bUD3dnEvm2PGxpkHaQTKoWiKBnQ==",
+      "path": "fsharpx.extras/3.1.0",
+      "hashPath": "fsharpx.extras.3.1.0.nupkg.sha512"
+    },
+    "MathNet.Numerics/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pg1W2VwaEQMAiTpGK840hZgzavnqjlCMTVSbtVCXVyT+7AX4mc1o89SPv4TBlAjhgCOo9c1Y+jZ5m3ti2YgGgA==",
+      "path": "mathnet.numerics/5.0.0",
+      "hashPath": "mathnet.numerics.5.0.0.nupkg.sha512"
+    },
+    "MathNet.Numerics.FSharp/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lKYhd68fReW5odX/q+Uzxw3357Duq3zmvkYvnZVqqcc2r/EmrYGDoOdUGuHnhfr8yj9V34js5gQH/7IWcxZJxg==",
+      "path": "mathnet.numerics.fsharp/5.0.0",
+      "hashPath": "mathnet.numerics.fsharp.5.0.0.nupkg.sha512"
+    },
+    "System.Reflection.Emit.Lightweight/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a4OLB4IITxAXJeV74MDx49Oq2+PsF6Sml54XAFv+2RyWwtDBcabzoxiiJRhdhx+gaohLh4hEGCLQyBozXoQPqA==",
+      "path": "system.reflection.emit.lightweight/4.7.0",
+      "hashPath": "system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
     }
   }
 }
