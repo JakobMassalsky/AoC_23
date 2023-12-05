@@ -10,6 +10,8 @@ let inputPath = "./input/"
 let readInput (filePath: string) : string[] =
     File.ReadAllLines(inputPath + filePath)
 
+let slurpInput (filePath: string) : string = File.ReadAllText(inputPath + filePath)
+
 let inline (>=<) a (b,c) = a >= b && a<= c
 
 let inputToCharGrid (input: string array): Char[,] = 
@@ -43,4 +45,17 @@ let dec v = v - 1
 
 let stringSplit (separators: char) (options: StringSplitOptions) (str: string) = 
     str.Split(separators, options)
+
+
+// type cRange =
+//     struct
+//         val st: int64
+//         val en: int64
+//         val off: int64
+
+//         new(newv: int64, oldv: int64, len: int64) =
+//             { st = oldv
+//               en = oldv + len
+//               off = newv - oldv }
+//     end
 
