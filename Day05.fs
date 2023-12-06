@@ -12,6 +12,16 @@ open System.Text.RegularExpressions
 //     else if r1.st <= r2.st && r1.en >= r2.en then 
 //         r2.off <- r2.off + r1.off r2
 
+// let convRange (rs: int64 array array) (rseed: int64 array) =
+//     let [|sseed; l|] = rseed
+//     let eseed = s + l
+//     if 
+
+//     int64 0
+    // Array.concat [r1s; r2s] |> Array.sortBy (fun r -> r[1])
+        // |> Array.pairwise
+        // |> Array.map (fun (r1, r2) -> if r1[])
+
 let makeConversion n ([|dR; sR; l|]: int64 array) =
     if n >=< (sR, sR+l-int64(1)) then n - (sR - dR) else n
 

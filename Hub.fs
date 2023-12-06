@@ -16,7 +16,7 @@ let main args =
         | "03" -> Day03.solve
         | "04" -> Day04.solve
         | "05" -> Day05.solve
-        // | "06" -> printfn "%s" Day06.solve()
+        | "06" -> Day06.solve
         // | "07" -> printfn "%s" Day07.solve()
         // | "08" -> printfn "%s" Day08.solve()
         // | "09" -> printfn "%s" Day09.solve()
