@@ -13,11 +13,13 @@
     <Compile Include="Day04.fs" />
     <Compile Include="Day05.fs" />
     <Compile Include="Day06.fs" />
+    <Compile Include="Day07.fs" />
     <Compile Include="Hub.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FSharpx.Extras" Version="3.1.0" />
+    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
     <PackageReference Include="MathNet.Numerics.FSharp" Version="5.0.0" />
   </ItemGroup>
 
