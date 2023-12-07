@@ -1,5 +1,6 @@
 module Day05
 
+#nowarn
 open Utils
 open System
 open System.Text.RegularExpressions
