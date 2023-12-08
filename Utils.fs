@@ -46,16 +46,10 @@ let dec v = v - 1
 let stringSplit (separators: char) (options: StringSplitOptions) (str: string) = 
     str.Split(separators, options)
 
+let rec gcd a b = match (a,b) with
+                    | (x,y) when x = y -> x
+                    | (x,y) when x > y -> gcd (x-y) y
+                    | (x,y) -> gcd x (y-x)
 
-// type cRange =
-//     struct
-//         val st: int64
-//         val en: int64
-//         val off: int64
-
-//         new(newv: int64, oldv: int64, len: int64) =
-//             { st = oldv
-//               en = oldv + len
-//               off = newv - oldv }
-//     end
+let lcm (a: int64) (b: int64) = a*b/(gcd a b)
 

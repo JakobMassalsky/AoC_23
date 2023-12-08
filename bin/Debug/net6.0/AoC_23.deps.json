@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "AoC_23/1.0.0": {
         "dependencies": {
-          "FSharp.Core": "7.0.400",
+          "FSharp.Core": "6.0.6",
           "FSharpx.Extras": "3.1.0",
           "MathNet.Numerics": "5.0.0",
           "MathNet.Numerics.FSharp": "5.0.0"
@@ -19,7 +19,7 @@
       },
       "FSharp.Control.AsyncSeq/2.0.21": {
         "dependencies": {
-          "FSharp.Core": "7.0.400"
+          "FSharp.Core": "6.0.6"
         },
         "runtime": {
           "lib/netstandard2.0/FSharp.Control.AsyncSeq.dll": {
@@ -28,11 +28,11 @@
           }
         }
       },
-      "FSharp.Core/7.0.400": {
+      "FSharp.Core/6.0.6": {
         "runtime": {
           "lib/netstandard2.1/FSharp.Core.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.4.23.37403"
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.622.46901"
           }
         },
         "resources": {
@@ -80,7 +80,7 @@
       "FSharpx.Async/1.14.1": {
         "dependencies": {
           "FSharp.Control.AsyncSeq": "2.0.21",
-          "FSharp.Core": "7.0.400"
+          "FSharp.Core": "6.0.6"
         },
         "runtime": {
           "lib/netstandard2.0/FSharpx.Async.dll": {
@@ -91,7 +91,7 @@
       },
       "FSharpx.Collections/2.1.2": {
         "dependencies": {
-          "FSharp.Core": "7.0.400"
+          "FSharp.Core": "6.0.6"
         },
         "runtime": {
           "lib/netstandard2.0/FSharpx.Collections.dll": {
@@ -102,7 +102,7 @@
       },
       "FSharpx.Extras/3.1.0": {
         "dependencies": {
-          "FSharp.Core": "7.0.400",
+          "FSharp.Core": "6.0.6",
           "FSharpx.Async": "1.14.1",
           "FSharpx.Collections": "2.1.2",
           "System.Reflection.Emit.Lightweight": "4.7.0"
@@ -124,7 +124,7 @@
       },
       "MathNet.Numerics.FSharp/5.0.0": {
         "dependencies": {
-          "FSharp.Core": "7.0.400",
+          "FSharp.Core": "6.0.6",
           "MathNet.Numerics": "5.0.0"
         },
         "runtime": {
@@ -150,12 +150,12 @@
       "path": "fsharp.control.asyncseq/2.0.21",
       "hashPath": "fsharp.control.asyncseq.2.0.21.nupkg.sha512"
     },
-    "FSharp.Core/7.0.400": {
+    "FSharp.Core/6.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SZR1jcjcrdhjRObN/U16nI+RyvKBgg0zq8Pt2KAorDkvW0cXSjX4qKDNX+LpZaKZRA5QR9StHZ2mhT5VI/QSxw==",
-      "path": "fsharp.core/7.0.400",
-      "hashPath": "fsharp.core.7.0.400.nupkg.sha512"
+      "sha512": "sha512-ZSwKKw+q50wDYHNs12WkKKgZ5vJScN2+cbq6+4jvn8H/D2W8rGMlybGNLHSF96v/Igx680mV7fPTtQe3V/quxg==",
+      "path": "fsharp.core/6.0.6",
+      "hashPath": "fsharp.core.6.0.6.nupkg.sha512"
     },
     "FSharpx.Async/1.14.1": {
       "type": "package",
