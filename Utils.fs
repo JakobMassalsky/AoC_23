@@ -53,3 +53,6 @@ let rec gcd a b = match (a,b) with
 
 let lcm (a: int64) (b: int64) = a*b/(gcd a b)
 
+let swap f a b = f b a
+let tup f (a, b) = f a b
+let rminus a b = b - a
