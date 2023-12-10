@@ -7,11 +7,11 @@ let convergeSequence (seqqq: int array) =
     seqqq |> Seq.unfold (fun state -> 
         Some (state, state |> Array.pairwise |> Array.map (tup rminus)))
         |> Seq.takeWhile (Array.exists ((<>) 0))
-        
+
     // Identical to:
     // let rec reductions (v: int array) = seq { 
     //     yield v
-    //     yield! (reductions (v |> Array.pairwise |> Array.map ((fun (a, b) -> b-a))))
+    //     yield! (reductions (v |> Array.pairwise |> Array.map (tup rminus)))
     // }
     // seqqq |> reductions |> Seq.takeWhile (Array.exists ((<>) 0))
 

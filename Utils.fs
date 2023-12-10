@@ -56,3 +56,5 @@ let lcm (a: int64) (b: int64) = a*b/(gcd a b)
 let swap f a b = f b a
 let tup f (a, b) = f a b
 let rminus a b = b - a
+
+let clamp v mi ma = max v mi |> min ma

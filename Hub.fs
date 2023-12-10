@@ -20,25 +20,7 @@ let main args =
         | "07" -> Day07.solve
         | "08" -> Day08.solve
         | "09" -> Day09.solve
-        // | "07" -> printfn "%s" Day07.solve()
-        // | "08" -> printfn "%s" Day08.solve()
-        // | "09" -> printfn "%s" Day09.solve()
-        // | "10" -> printfn "%s" Day10.solve()
-        // | "11" -> printfn "%s" Day11.solve()
-        // | "12" -> printfn "%s" Day12.solve()
-        // | "13" -> printfn "%s" Day13.solve()
-        // | "14" -> printfn "%s" Day14.solve()
-        // | "15" -> printfn "%s" Day15.solve()
-        // | "16" -> printfn "%s" Day16.solve()
-        // | "17" -> printfn "%s" Day17.solve()
-        // | "18" -> printfn "%s" Day18.solve()
-        // | "19" -> printfn "%s" Day19.solve()
-        // | "20" -> printfn "%s" Day20.solve()
-        // | "21" -> printfn "%s" Day21.solve()
-        // | "22" -> printfn "%s" Day22.solve()
-        // | "23" -> printfn "%s" Day23.solve()
-        // | "24" -> printfn "%s" Day24.solve()
-        // | "25" -> printfn "%s" Day25.solve()
+        | "10" -> Day10.solve
         | _ -> printfn "Day %s not implemented" day
 
         
