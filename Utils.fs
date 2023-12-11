@@ -12,7 +12,7 @@ let readInput (filePath: string) : string[] =
 
 let slurpInput (filePath: string) : string = File.ReadAllText(inputPath + filePath)
 
-let inline (>=<) a (b,c) = a >= b && a<= c
+let inline (>=<) a (b,c) = a >= b && a <= c
 
 let inputToCharGrid (input: string array): Char[,] = 
     let arrays = input |> Array.map Array.ofSeq
@@ -20,7 +20,7 @@ let inputToCharGrid (input: string array): Char[,] =
     let cols = if rows > 0 then arrays.[0].Length else 0
     Array2D.init rows cols (fun i j -> arrays.[i].[j])
 
-let readCharGrid filePath = readInput >> inputToCharGrid
+let readCharGrid filePath = (readInput >> inputToCharGrid)
 
 let inputToIntGrid (input: string array): int Matrix = 
     let arrays = input |> Array.map Array.ofSeq
