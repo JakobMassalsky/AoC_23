@@ -53,8 +53,78 @@ let rec gcd a b = match (a,b) with
 
 let lcm (a: int64) (b: int64) = a*b/(gcd a b)
 
-let swap f a b = f b a
+
+let both f g x = (f x, g x)
+let flip f a b = f b a
+let swap (a,b) = (b,a)
+
 let tup f (a, b) = f a b
 let rminus a b = b - a
+let rdiv a b = b / a
 
 let clamp v mi ma = max v mi |> min ma
+
+let rec comb n l = 
+    match n, l with
+    | 0, _ -> [[]]
+    | _, [] -> []
+    | k, (x::xs) -> List.map ((@) [x]) (comb (k-1) xs) @ comb k xs
+
+let comb2 l = 
+    l |> comb 2 |> List.map (fun v -> (v[0], v[1]))
+
+let rec iterate f x =
+        seq {
+            yield x
+            yield! iterate f (f x)
+        }
+
+let infinite (a:'a) = iterate id a
+
+let until p f i = Seq.scan f i >> Seq.takeWhile (p >> not)
+
+let tap a = printfn $"%A{a}"
+            a
+
+let inline mapSnd f (a,b) = (a,f b)
+let inline mapFst f (a,b) = (f a, b)
+let inline mapBoth f (a,b) = (f a, f b)
+let inline twice x = (x, x)
+
+let curry f a b = f (a,b)
+let uncurry f (a,b) = f a b
+
+let foldr folder state arr = Array.foldBack folder arr state
+
+let p a = 
+    printfn "%A" a
+    a
+
+let memoize f =
+    let mutable dict = Map.empty
+    fun n ->
+        let c = n
+        match dict.ContainsKey(c) with
+        | true -> dict[c]
+        | false ->
+            let temp = f(n)
+            dict <- dict.Add((c), temp)
+            temp
+
+let memoizeh f h =
+    let mutable dict = Map.empty
+    fun n ->
+        let c = h(n)
+        match dict.ContainsKey(c) with
+        | true -> dict[c]
+        | false ->
+            let temp = f(n)
+            dict <- dict.Add(c, temp)
+            temp
+
+// Counts the number of consecutive equal elements in a list
+let pack xs =
+    let imp x = function
+        | (i, count) :: ta when i = x -> (i, count + 1) :: ta
+        | ta -> (x, 1) :: ta
+    List.foldBack imp xs [] 

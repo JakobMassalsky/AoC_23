@@ -26,11 +26,11 @@ let solve =
     let mutable galaxySet = Set.empty
     input |> Array2D.iteri (fun x y c -> if c = '#' then galaxySet <- galaxySet.Add(int64(x), int64(y)))
 
-    let dists = galaxySet |> Set.toArray |> (fun x -> (x, x)) ||> Array.allPairs
+    let dists = galaxySet |> Set.toList |> comb2
 
     // Solve Part 1
-    printfn "Part 1 Result: %A" ((dists |> Array.sumBy (tup (getDist galaxySet 2L))) / 2L)
+    printfn "Part 1 Result: %A" (dists |> List.sumBy (tup (getDist galaxySet 2L)))
 
     // Solve Part 2
-    printfn "Part 2 Result: %A" ((dists |> Array.sumBy (tup (getDist galaxySet 1000000L))) / 2L)
+    printfn "Part 2 Result: %A" (dists |> List.sumBy (tup (getDist galaxySet 1000000L)))
 
