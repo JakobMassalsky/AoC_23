@@ -10,7 +10,7 @@ let inputPath = "./input/"
 let readInput (filePath: string) : string[] =
     File.ReadAllLines(inputPath + filePath)
 
-let slurpInput (filePath: string) : string = File.ReadAllText(inputPath + filePath)
+let slurpInput (filePath: string) : string = File.ReadAllText(inputPath + filePath) |> fun s -> s.TrimEnd('\n').TrimEnd('\r')
 
 let inline (>=<) a (b,c) = a >= b && a <= c
 
@@ -22,11 +22,12 @@ let inputToCharGrid (input: string array): Char[,] =
 
 let readCharGrid filePath = (readInput >> inputToCharGrid)
 
-let inputToIntGrid (input: string array): int Matrix = 
-    let arrays = input |> Array.map Array.ofSeq
+let inputToIntGrid (input: string array): Double Matrix = 
+    let arrays = input 
+                |> Array.map Array.ofSeq
     let rows = arrays.Length
     let cols = if rows > 0 then arrays.[0].Length else 0
-    DenseMatrix.init rows cols (fun i j -> Int32.Parse(string arrays.[i].[j]))
+    DenseMatrix.init rows cols (fun i j -> Double.Parse(string arrays.[i].[j]))
 
 let readIntGrid filePath = readInput >> inputToIntGrid
 
