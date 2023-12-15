@@ -31,6 +31,14 @@ let inputToIntGrid (input: string array): Double Matrix =
 
 let readIntGrid filePath = readInput >> inputToIntGrid
 
+let revCols m =
+    m |> Matrix.toColSeq |> Seq.rev |> DenseMatrix.ofColumnSeq
+
+let revRows m =
+    m |> Matrix.toRowSeq |> Seq.rev |> DenseMatrix.ofRowSeq
+
+let revMat m = m |> revCols |> revRows
+
 let boundedSlice<'T> (xmin, ymin) (xmax, ymax) (collection: 'T[,]): 'T[,] =
     collection[max 0 (ymin) .. min (Array2D.length1 collection-1) (ymax), 
                max 0 (xmin) .. min (Array2D.length2 collection-1) (xmax)]
