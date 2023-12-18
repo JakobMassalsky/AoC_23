@@ -1,5 +1,6 @@
 module Day16
 
+#nowarn "0025"
 open Utils
 open System
 

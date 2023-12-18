@@ -137,3 +137,5 @@ let pack xs =
         | (i, count) :: ta when i = x -> (i, count + 1) :: ta
         | ta -> (x, 1) :: ta
     List.foldBack imp xs [] 
+
+let applyTup f (a, b) (c, d) = (f a c, f b d)

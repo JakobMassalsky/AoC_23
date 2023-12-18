@@ -1,6 +1,6 @@
 module Day07
 
-#nowarn
+#nowarn "0025"
 open Utils
 open System
 

@@ -1,5 +1,6 @@
 module Day12
 
+#nowarn "0040"
 open Utils
 open System
 
