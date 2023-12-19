@@ -99,6 +99,9 @@ let inline mapSnd f (a,b) = (a,f b)
 let inline mapFst f (a,b) = (f a, b)
 let inline mapBoth f (a,b) = (f a, f b)
 let inline twice x = (x, x)
+let inline a2t (a: array<'a>) = (a[0], a[1])
+let inline l2t (a: list<'a>) = (a[0], a[1])
+let inline s2t (a: seq<'a>) = (Seq.item 0 a, Seq.item 1 a)
 
 let curry f a b = f (a,b)
 let uncurry f (a,b) = f a b
