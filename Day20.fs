@@ -1,5 +1,6 @@
 module Day20
 
+#nowarn "0025"
 open Utils
 open System
 open System.Collections.Generic

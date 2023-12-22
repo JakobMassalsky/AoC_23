@@ -31,6 +31,8 @@ let main args =
         | "18" -> Day18.solve
         | "19" -> Day19.solve
         | "20" -> Day20.solve
+        | "21" -> Day21.solve
+        | "22" -> Day22.solve
         | _ -> printfn "Day %s not implemented" day
 
         
