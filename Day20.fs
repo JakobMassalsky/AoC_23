@@ -15,7 +15,7 @@ let updateMem pulse source (m: Map<string,bool> option) =
     | Some ma -> ma |> Map.change source (fun _ -> Some pulse) |> Some
     | None -> None
 
-let pressButton ((memory: Map<string,Map<string,bool>>), (fStates: Map<string,bool>), (ops: Map<string,char>), (dests: Map<string,string array>), h, l, rx) =
+let pressButton ((memory: Map<string,Map<string,bool>>), (fStates: Map<string,bool>), (ops: Map<string,char>), (dests: Map<string,string array>), h, l, rx, find) =
     let mutable mem = memory
     let mutable fstates = fStates
     let mutable queue = Queue()
@@ -28,7 +28,7 @@ let pressButton ((memory: Map<string,Map<string,bool>>), (fStates: Map<string,bo
         let (m, pulse, source) = queue.Dequeue()
         // p (source, pulse, "->", m)
         if pulse then highs <- highs+1 else lows <- lows+1
-        if m = "rx" then rx' <- rx' || not pulse else rx' <- rx'
+        if m = find && not pulse then rx' <- rx' + 1 else rx' <- rx'
         if not (ops.ContainsKey(m)) then rx' <- rx' else
         match ops[m] with
         | '%' -> if not pulse 
@@ -42,16 +42,18 @@ let pressButton ((memory: Map<string,Map<string,bool>>), (fStates: Map<string,bo
         | 'b' -> for d in dests[m] do
                     queue.Enqueue((d, pulse, m))
         | _ -> highs <- highs
-    mem, fstates, ops, dests, highs, lows, rx'
+    mem, fstates, ops, dests, highs, lows, rx', find
 
 let solvePart1 memory ops fStates dests =
-    // let (_, _, _, _, h, l) = iterate pressButton (memory, fStates, ops, dests, 0, 0) |> Seq.item 1000
-    // l * h
-    0
+    let (_, _, _, _, h, l, _, _) = iterate pressButton (memory, fStates, ops, dests, 0, 0, 0, "") |> Seq.item 1000
+    l * h
 
 let solvePart2 memory ops fStates dests =
-    let i = iterate pressButton (memory, fStates, ops, dests, 0, 0, false) |> Seq.findIndex (fun (_,_,_,_,_,_,rx) -> rx)
-    i
+    let i = iterate pressButton (memory, fStates, ops, dests, 0, 0, 0, "qz")
+    memory["qn"].Keys |> Seq.map (fun k -> 
+        iterate pressButton (memory, fStates, ops, dests, 0, 0, 0, k) |> Seq.findIndex (fun (_,_,_,_,_,_,rx, _) -> rx >= 1))
+        |> Seq.map int64
+        |> Seq.reduce lcm
 
 let solve =
     let input = readInput "day20.txt"
